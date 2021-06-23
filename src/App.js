@@ -14,7 +14,7 @@ class App extends React.Component {
         getAll: async query => {
             let result
             try {
-                result = await fetch(this.crud.endpoint + "?search=" + query + "&limit=1")
+                result = await fetch(this.crud.endpoint + "?search=" + query)
                 if (!result.ok) throw new Error("Got data in return but status.ok is false!")
                 result = await result.json()
             } catch (error) {
